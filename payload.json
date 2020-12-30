@@ -1,0 +1,36 @@
+{
+  "receiver": "notifier",
+  "status": "firing",
+  "alerts": [
+    {
+      "status": "firing",
+      "labels": {
+        "alertname": "HostLowCpuLoad",
+        "instance": "localhost:8081",
+        "severity": "warning"
+      },
+      "annotations": {
+        "description": "CPU load is < 95%\n  VALUE = 10.95765771264287\n  LABELS: map[instance:localhost:8081]",
+        "summary": "Host low CPU load (instance localhost:8081)"
+      },
+      "startsAt": "2020-12-30T06:17:37.967594653Z",
+      "endsAt": "0001-01-01T00:00:00Z",
+      "generatorURL": "http://abhishek.sah:9090/graph?g0.expr=100+-+%28avg+by%28instance%29+%28rate%28node_cpu_seconds_total%7Bmode%3D%22idle%22%7D%5B5m%5D%29%29+%2A+100%29+%3C+95&g0.tab=1",
+      "fingerprint": "f079708e5ec679e2"
+    }
+  ],
+  "groupLabels": { "alertname": "HostLowCpuLoad" },
+  "commonLabels": {
+    "alertname": "HostLowCpuLoad",
+    "instance": "localhost:8081",
+    "severity": "warning"
+  },
+  "commonAnnotations": {
+    "description": "CPU load is < 95%\n  VALUE = 10.95765771264287\n  LABELS: map[instance:localhost:8081]",
+    "summary": "Host low CPU load (instance localhost:8081)"
+  },
+  "externalURL": "http://abhishek.sah:9093",
+  "version": "4",
+  "groupKey": "{}:{alertname=\"HostLowCpuLoad\"}",
+  "truncatedAlerts": 0
+}
